@@ -336,6 +336,7 @@ d-i pkgsel/include string\
  openssh-server\
  git git-core gitk git-gui\
  postgresql-9.1\
+ libpq-dev\
  chromium-browser iceweasel curl lynx\
  tmux\
  tcpflow 
