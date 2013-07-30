@@ -338,6 +338,7 @@ d-i pkgsel/include string\
  postgresql-9.1\
  libpq-dev\
  chromium-browser iceweasel curl lynx\
+ markdown\
  tmux\
  tcpflow 
 
