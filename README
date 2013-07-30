@@ -1,0 +1,61 @@
+              Moxie Debian Custom Installation ISO Generator
+
+Usage: 
+
+  make help
+  make prompt
+  sudo [CUSTOM_VAR=foo] make
+  sudo make
+  sudo make clean
+
+
+Recommended Usage:
+
+  make prompt
+
+
+Description:
+
+  This Makefile and supporting files are for creating an iso based on the
+  Debian businesscard netinst media.
+
+  Currently only tested for amd64 under a VirtualBox environment.
+
+  Review pressed.d/[TARGET_BUILD] files for available targets, the target
+  configuration and the packages they contain.
+
+
+Build Variables:
+  If a variable is not set in the environment a default will be used.
+  See the Makefile for the default values.
+
+  CUSTOM_USERNAME: the first user on the new system
+  CUSTOM_FULLNAME: the full name of the first user
+  CUSTOM_TIMEZONE: timezone for the system
+  CUSTOM_HOSTNAME: hostname for the system
+  CUSTOM_DOMAIN:   domain for the system
+  TARGET_BUILD:    Identifies the preseed.cfg.template to use [dev, test, prod]
+
+  The DEB_ vars can be used to change the Debian Source image that is used.
+  This is not recommended unless testing for a new distribution.
+
+  DEB_VER:  debian version e.g. 6.0.3
+  DEB_ARCH: target architecture e.g. amd64
+
+Bootable ISO:
+
+  Upon success the bootable iso can be found in the . directory.  e.g.
+  ./moxie-debian-6.0.3-amd64-buisinesscard.iso.  This iso can be used to boot
+  a network enable installation of Debian.
+
+Todo Ideas:
+
+  - Allow user selection of Locale/Keyboard seetings, or write user
+    instructions on how to do so post installation. 
+
+  - Template the preseed files so common configurations can be used across
+    multiple build targets.
+
+  - Have common builds to set CUSTOM_ vars 
+
+  - Desktop and Server Targets (currently only 'dev' which is a desktop)

@@ -1,0 +1,9 @@
+*.iso
+*.swo
+*.swp
+.~*
+~*
+isofiles
+iso_source
+preseed.cfg
+workspace
