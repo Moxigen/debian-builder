@@ -335,7 +335,7 @@ d-i pkgsel/include string\
  etckeeper\
  openssh-server\
  git git-core gitk git-gui\
- postgresql-9.1\
+ postgresql-9.1 postgresql-contrib-9.1\
  libpq-dev\
  chromium-browser iceweasel curl lynx\
  tmux\
